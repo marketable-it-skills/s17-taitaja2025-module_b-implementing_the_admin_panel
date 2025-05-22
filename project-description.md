@@ -1,81 +1,142 @@
-# Test Project Outline – Module A – Static Website Design
+# Taitaja2025 - Module B – Implementing the Admin Panel
+
+## Competition time 
+4 hours
 
 ## Introduction
 
-This project will focus on the creation of a static website using HTML and CSS only. You are asked to create a static website for a specified client.
-The website will consist of subpages which should be reachable under separate paths.
+In this competition task, you will develop an application commissioned by Hobbly Technologies Ltd. The app helps users discover local hobbies and events. 
 
-The website has to conform with accessibility standards (WCAG) and implement SEO best practices,
-as it will be used to attract new users for a product of the client.
+The competitor’s task is to build an admin panel for the Hobbly application, which will manage activity announcements and user accounts.
 
-Responsiveness is also important and the website should look good on three different viewports:
-mobile, tablet, and desktop.
+## General Description
 
-The client will supply you with a defined website structure and will therein define all
-the pages and sections of the website. The client will also provide all content for the website,
-such as text, images, and other media, as well as the exact definitions of the
-responsive breakpoints.
+The admin panel must be designed for a 1440px wide desktop layout and follow the client's brand guidelines.
 
-## General Description of Project and Tasks
+The user interface must be straightforward and easy to use. It must support content and user management according to role-based permissions.
 
-The website must consist of four different pages which will be explained in detail in this sections.
-The design of all subpages should be aligned.
+Judging will focus on functionality, usability, security, and code quality.
 
-Within the media files, the client provided some media, icons, and text.
-You are free to use them or create custom assets on your own.
-
-As the website will be publicly available, it is important to the client that the website conforms to accessibility standards (WCAG) and implements SEO best practices.
-
-The website must be responsive and support at least the following viewports:
-
-- Mobile: 360x640
-- Tablet: 768x1024
-- Desktop: 1920x1080
-
-No server-side or client-side framework is allowed for this project.
-CSS preprocessors may be used, but the generated code must still pass the W3C validations.
-All HTML and CSS code must pass the W3C validations, even generated one.
+Implementation must be technically functional, clearly documented, and ready for further development.
 
 ## Requirements
 
-The goal of the website is to promote a suite of AI driven APIs.
-Potential customers must be able to inform themselves about the possibilities of those APIs, the pricing, and the team behind this product.
+**Core features**
 
-You can add more information and elements to all pages as you see fit.
-It's also possible to add links that point towards pages that do not exist yet (for example to a login page).
+- User registration and login (via email and password)
+- Password change option in user settings
+- Ability to add, edit, and delete activities (only the user's posts)
+- Admin rights: manage all posts and users
+- Two-step deletion process for user accounts
 
-For each page, some example text and more are provided in the media files.
-However, not all the provided material has to be used.
+### User Accounts and Login
+Users of the admin panel can create their accounts using a multi-step registration form.
 
-The following pages must be implemented.
+#### Registration (3 steps, single-page flow – URL remains unchanged):
+**Contact Details:**
 
-### Home Page
+- User’s name
+- Email address
+- Phone number
+  
+**Basic Info:**
+- Upload logo (JPEG/PNG, max 2MB)
+- Display name
+- Description (min. 25 characters, max. 200 characters)
+  
+**Organisation Info:**
+- Official name
+- Address
+- City
+- Postal code
+- Business ID (optional)
+- Organisation type:
+  - Association
+  - Private
+  - Limited company
+  
+#### Login and Security
+- The email address is used as the username.
+- The password must have at least eight characters and one number.
+- Duplicate emails are not allowed → an error message must be shown.
+- Passwords must be securely stored (e.g., bcrypt or Argon2).
+- The admin panel must not be accessible without a login.
+  
+#### Password Change
+The application creates a password when a user account is created. However, users must be able to change their passwords from within the admin panel.
+When changing a password, the system must check that it meets the minimum requirements (at least eight characters and one number). If it doesn't, an error message must appear, and the password must not be changed.
 
-A short but catching home page.
-The idea is to show the product with some simple information and engaging media.
-It must contain links to the product and pricing pages where interested visitors can find more information.
+#### Administrator (Admin)
+- Default admin username: taitaja@hobbly.app
+- Password: Taitaja123!
+- Admins can manage all users and all activity posts.
 
-### Product Page
+### Managing Activity Announcements
+Users can add, edit, and delete their hobby and activity announcements within the admin panel.
+They can permanently delete or move a post to trash (soft delete).
 
-The product page shows the whole AI API suite, by listing all available APIs and their features.
+**Form fields for adding a post:**
+- Title (required)
+- Description (required)
+- URL link (optional, e.g. for more information)
+- Image upload (JPEG/PNG, max 2MB)
+- Activity type (select from list)
+- Category (select from list)
+- Tags (separated by commas; new tags are added automatically)
+- Location info:
+ - Address (displayed as text)
+ - Latitude
+ - Longitude
+  
+**Activity Types – 5 options**
+- Activity
+- Event
+- Hobby opportunity
+- Club
+- Competition
 
-### Pricing Page
+**Categories – 10 options**
+- Sports and exercise
+- Music and performing arts
+- Crafts and arts
+- Science and technology
+- Games and eSports
+- Food and cooking
+- Nature and outdoor activities
+- Culture and history
+- Community and volunteering
+- Children and families
 
-On the pricing page, the pricing of the APIs must be explained.
+**Tags – 10 options**
+*(If a tag doesn't exist, it will be automatically added.)*
+- Free of charge
+- Open to everyone
+- Beginner-friendly
+- Ongoing event
+- Online
+- Suitable for families
+- Suitable for seniors
+- Suitable for special groups
+- Equipment available on-site
+- Requires pre-registration
 
-### Team Page
+#### Two-Step Deletion
+1.	Move to Trash (soft delete)
+- The post is moved to the trash bin and is no longer visible as active.
+- The user can restore the post or delete it permanently.
+2.	Permanent Deletion
+- The post is permanently deleted from the database and cannot be recovered.
+- The user must confirm deletion separately to prevent mistakes:
+"Are you sure you want to delete this post permanently? This action cannot be undone!"
 
-As the client is also looking to grow their team, a dedicated team page must show the current employees and also highlight some core values of the company.
-
-### Global Elements
-
-The following elements must be available on all pages:
-
-- **Header**: must at least include a product name in form of text or a logo
-- **Navigation**: contains easily accessible links to all pages
-- **Footer**: includes at least a copyright notice
-
-All elements can be enriched with more information where it makes sense.
+### User Management (Admins only)
+There are two roles in the admin panel:
+1.	Regular Users (e.g. sports clubs or businesses)
+a.	Can only view and manage their announcements.
+2.	Administrators (Hobbly staff)
+a.	Can manage all users and all announcements.
+b.	Can create, edit, and delete user accounts.
+c.	Can see all user information and their announcements.
 
 ## Assessment
 
@@ -84,16 +145,14 @@ The axe browser extension is installed in Google Chrome and allows competitors t
 
 ## Mark distribution
 
-The table below outlines how marks are broken down and how they align with the WorldSkills
-Occupation Standards (WSOS). Please read the Technical Description for a full explanation of the
-WorldSkills Occupation Standards.
-
-| WSOS SECTION | Description                            | Points |
-| ------------ | -------------------------------------- | ------ |
-| 1            | Work organization and self-management  | 1      |
-| 2            | Communication and interpersonal skills | 1      |
-| 3            | Design Implementation                  | 15     |
-| 4            | Front-End Development                  | 0      |
-| 5            | Back-End Development                   | 0      |
-|              |                                        |        |
-| **Total**    |                                        | 17     |
+| Description                     | Points |
+| ------------------------------- | ------ |
+| Registration                    | 10     |
+| Login                           | 1      |
+| Password Change                 | 2      |
+| Managing Activity Announcements | 8      |
+| User Management                 | 4,5    |
+| Code quality                    | 3      |
+| Project management              | 1,5    |
+|                                 |        |
+| **Total**                       | 30     |

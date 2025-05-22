@@ -1,8 +1,6 @@
-# Marketable IT Skills Project Repository
+# Implementing the Admin Panel
 
-## Title of the Project
-
-Design & Implementation: Promo Website
+The competitor’s task is to build an admin panel for the Hobbly application, which will manage activity announcements and user accounts.
 
 ## Skill domain(s)
 
@@ -10,12 +8,13 @@ Design & Implementation: Promo Website
 
 ## Task Origin
 
-This project task is based on test projects based on the EuroSkills Gdansk 2023 competition Module-A test project submitted by Cyril Wanner (CH) and Sebastian Häni (CH). Tasks from these competitions are updated, modularized, and standardized to form the basis of the project task repository within the Erasmus+ "Marketable IT Skills" project.
+This project task is based on test projects based on the Taitaja2025 Finnish National Skills competition Module-B test project submitted Margit Tennosaar.
+Tasks from these competitions are updated, modularized, and standardized to form the basis of the project task repository within the Erasmus+ "Marketable IT Skills" project.
 
 ## Content
 
 - [Project Description](project-description.md)
-- [Media Files](tree/main/src//assets)
+- [Media Files](tree/main/src/assets)
 
 ## How to develop and deploy the project?
 
