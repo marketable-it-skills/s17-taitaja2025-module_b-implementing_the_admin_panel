@@ -1,12 +1,39 @@
 {
-"id": 1,
-"name": "Taitaja S17 - Module B",
-"displayName": "Implementing the Admin Panel",
-"description": "The competitor’s task is to build an admin panel for the Hobbly application, which will manage activity announcements and user accounts.",
-"url": "https://github.com/marketable-it-skills/s17-taitaja2025-module_b-implementing_the_admin_panel.git",
-"skillDomainsIds": [1],
-"languages": ["EN", "FI"],
-"competition": "Taitaja2025",
-"technologies": ["HTML", "CSS", "PHP"],
-"tags": ["backend", "implementation", "frontend", "Taitaja" ]
+    "id": 1,
+    "name": "Taitaja S17 - Module B",
+    "displayName": "Implementing the Admin Panel",
+    "description": "The competitor’s task is to build an admin panel for the Hobbly application, which will manage activity announcements and user accounts.",
+    "url": "https://github.com/marketable-it-skills/s17-taitaja2025-module_b-implementing_the_admin_panel",
+    "skillDomainsIds": [
+        1
+    ],
+    "languages": [
+        "EN",
+        "FI"
+    ],
+    "competition": "Taitaja2025",
+    "estTime": 4,
+    "authors": [
+        {
+            "name": "Margit Tennosaar",
+            "url": "https://www.linkedin.com/in/margittennosaar/"
+        },
+        {
+            "name": "Eeli Grén",
+            "url": "https://www.linkedin.com/in/eeligren/"
+        }
+    ],
+    "technologies": [
+        "HTML",
+        "CSS",
+        "PHP",
+        "SQL"
+    ],
+    "tags": [
+        "backend",
+        "databases",
+        "implementation",
+        "frontend",
+        "Taitaja"
+    ]
 }
