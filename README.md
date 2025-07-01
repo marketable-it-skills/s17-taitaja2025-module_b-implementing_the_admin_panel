@@ -8,12 +8,14 @@ The competitor’s task is to build an admin panel for the Hobbly application, w
 
 ## Task Origin
 
-This project task is based on test projects based on the Taitaja2025 Finnish National Skills competition Module-B test project submitted Margit Tennosaar.
+This project task is based on test projects based on the Taitaja2025 Finnish National Skills competition Module-B test project submitted [Margit Tennosaar](https://github.com/margittennosaar) Margit Tennosaar.
+
 Tasks from these competitions are updated, modularized, and standardized to form the basis of the project task repository within the Erasmus+ "Marketable IT Skills" project.
 
 ## Content
 
-- [Project Description](project-description.md)
+- [Project Description EN](project-description.md)
+- [Project Description FI](project-description_FI.md)
 - [Media Files](tree/main/src/assets)
 
 ## How to develop and deploy the project?
