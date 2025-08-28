@@ -26,12 +26,10 @@
     "technologies": [
         "HTML",
         "CSS",
-        "PHP",
-        "SQL"
+        "PHP"
     ],
     "tags": [
-        "backend",
-        "databases",
+        "backend",        
         "implementation",
         "frontend",
         "Taitaja"
